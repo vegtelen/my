@@ -1,0 +1,45 @@
+application {
+  config {
+    baseName myAppOauth2,
+    applicationType monolith,
+    packageName com.oauth2,
+    authenticationType jwt,
+    prodDatabaseType postgresql,
+    clientFramework angular,
+    prodDatabaseType postgresql,
+    devDatabaseType h2Disk
+buildTool	maven,
+cacheProvider	ehcache,
+clientPackageManager	npm,
+databaseType	sql,
+dtoSuffix	DTO
+enableHibernateCache	true		
+enableSwaggerCodegen	true
+enableTranslation	true		
+entitySuffix			Entity
+jhiPrefix	jhi		
+languages	[en, ge, hu]
+messageBroker	kafka
+nativeLanguage	en
+reactive	false		
+skipClient	false		
+skipServer	false		
+skipUserManagement	false		
+testFrameworks	[cucumber]
+websocket	false
+  }
+  entities *
+}
+
+entity A {
+ fieldA String
+}
+
+entity B {
+fieldB String 
+}
+
+relationship OneToMany {
+  A to B
+}
+    
